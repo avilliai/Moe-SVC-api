@@ -1,0 +1,41 @@
+#配置你的
+riri:             #触发名，可自定义
+  speaker: riri       #以模型配置文件为准
+  model: logs/G_riri_220.pth   #以bert_vits为根目录的相对路径
+  config: configs/config.json
+阿梓:
+  speaker: Azusa
+  model:
+    - logs/azusa/test.pth
+    - logs/azusa/config.json
+  lang: "[ZH]"
+otto:
+  speaker: otto
+  model:
+    - logs/otto/G_5900.pth
+    - logs/otto/config.json
+  lang: "[ZH]"
+东雪莲:
+  speaker: Azuma
+  model:
+    - logs/azuma/G_17400.pth
+    - logs/azuma/config.json
+  lang: "[ZH]"
+星瞳:
+  speaker: XingTong
+  model:
+    - logs/xingtong/G_15500.pth
+    - logs/xingtong/config.json
+  lang: "[ZH]"
+嘉然:
+  speaker: Diana
+  model:
+    - logs/diana/G_4800.pth
+    - logs/diana/config.json
+  lang: "[ZH]"
+剑魔:
+  speaker: Aatrox
+  model:
+    - logs/jianmo/G_2000.pth
+    - logs/jianmo/config.json
+  lang: "[ZH]"
