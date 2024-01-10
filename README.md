@@ -29,6 +29,10 @@ riri:             #触发名，可自定义
 
 双击 启动脚本.bat
 # 调用
+## 现有项目对接
+[Manyana](https://github.com/avilliai/Manyana)
+- 将settings.yaml中voicegenerate设置为so-vits即可
+## 自行调用
 api接收三个参数，一般传两个即可，即
 ```
 speaker      说话人，你characters.yaml中的自定义触发名
