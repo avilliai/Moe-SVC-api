@@ -44,7 +44,7 @@ def synthesize():
         print(speaker1,type(speaker1))
         #url="https://api.pearktrue.cn/api/aivoice/?speak=月婷&text="+text
         voicM=2
-        if text!="":
+        if "voice" not in data:
             if voicM==1:
                 url = "https://api.vvhan.com/api/song?txt=" + text+"&per=6"
                 r = requests.get(url)
