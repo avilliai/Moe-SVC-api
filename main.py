@@ -56,21 +56,29 @@ def synthesize():
                 prf="raw/"+p
                 command=f"edge-tts --voice zh-CN-XiaoyiNeural --text {text} --write-media {prf}"
                 os.system(command)
+                trim = 0
         else:
-            p ="D:/python/Manyana/data/voices/rest.wav"
-            copyfile(p, "raw/reset.wav")
-            p="reset.wav"
+            voicepath=data.get("voice")
+            p = str(voicepath).split("/")[-1]
+            copyfile(voicepath, "raw/"+p)
+            trim=20
         model = speaker1.get("model")
         config = speaker1.get("config")
         speaker222 = speaker1.get("speaker")
         name = p
         print(p)
         waveform = "wav"
-        trim = 0
 
+        command = f"python inference_main.py -m {model} -c {config} -s {speaker222} -n {name} -wf {waveform} -t {trim} -eak 10"
         # 拼接你的指令字符串
-        command = f"python inference_main.py -m {model} -c {config} -s {speaker222} -n {name} -wf {waveform} -t {trim}"
-        os.system(command)
+        if "venv" in os.listdir():
+            os.system("cd venv/Scripts")
+            os.system("call activate.bat")
+            os.system("cd ../..")
+
+            os.system(command)
+        else:
+            os.system(command)
 
         return send_file("results/"+p.replace(".mp3",".wav"), as_attachment=True)
     # 将生成的音频返回给客户端
