@@ -33,7 +33,7 @@ riri:             #触发名，可自定义
 ## 现有项目对接
 [Manyana](https://github.com/avilliai/Manyana)
 - 将settings.yaml中voicegenerate设置为so-vits
-- 将settings.yaml中chatGLM.speaker设置为你characters.yaml中的【自定义触发名】(不是spk那个)，这样ai回复的时候就直接能调用它了。
+- 将settings.yaml中speaker设置为你characters.yaml中的【自定义触发名】(不是spk那个)，这样ai回复的时候就直接能调用它了。
 - (可选)在settings.yaml中so_vits_speakers，添加你自己上面characters.yaml设置的【自定义触发名】(不是spk那个)
 ## 自行调用
 api接收三个参数，一般传两个即可，即
