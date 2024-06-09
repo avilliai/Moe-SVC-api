@@ -11,6 +11,7 @@ git clone https://github.com/avilliai/Moe-SVC-api.git
 - 下载[checkpoint_best_legacy_500.pt](https://ibm.ent.box.com/s/z1wgl1stco8ffooyatzdwsqn2psd9lrr) 并放入hubert文件夹
 - 必要：下载[模型](https://huggingface.co/TachibanaKimika/so-vits-svc-4.0-models) 你也可以用自己的
 - 把你的模型和配置文件放置在logs文件夹下(实际上你放别的地方也行，根据下一步建立索引即可)
+
 1.2 建立模型索引
 - 以记事本打开characters.yaml
 ```
