@@ -16,11 +16,16 @@ git clone https://github.com/avilliai/Moe-SVC-api.git
 - 以记事本打开characters.yaml
 ```
 riri:             #触发名，可自定义
-  speaker: riri       #以模型配置文件即config里面的spk项为准
+  speaker: riri                #以模型配置文件即config里面的spk项为准，使用默认config.json则无需修改此项
   model: logs/G_riri_220.pth   #模型对应根目录的相对路径
-  config: configs/config.json  #配置文件相对路径
+  config: configs/config.json  #配置文件相对路径，使用默认config.json则无需修改此项
+#如果你有多个模型，按同样方式构建索引即可
+塔菲:             #触发名，可自定义
+  speaker: taffy       #以模型配置文件即config里面的spk项为准，使用默认配置文件则无需修改此项
+  model: logs/G_taffy_250.pth   #模型对应根目录的相对路径
+  config: configs/config.json  #配置文件相对路径，使用默认配置文件则无需修改此项
 ```
-- 模型和配置文件的索引需要正确，speaker必须以模型配套配置文件里面的spk值为准
+- 模型和配置文件的索引需要正确。speaker必须以模型配套配置文件里面的spk值为准，如果没有配套config.json就用默认的configs/config.json，无需修改speaker和config
 
 2.部署环境
 
