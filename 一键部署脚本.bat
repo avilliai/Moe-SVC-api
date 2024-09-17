@@ -7,6 +7,5 @@ where python
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pause
 cd ../..
-venv/Scripts/python.exe -m pip install pip==24.0
 pip install -r requirements_win.txt
 pause
