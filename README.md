@@ -3,7 +3,8 @@
 
 **注意，项目对各依赖的要求较为复杂，强烈建议使用[python3.9.0](https://github.com/avilliai/wReply/releases/tag/yirimirai-Bot) ，由于python版本问题产生的报错请自行搜索解决。**
 # 部署项目
-前置
+0.前置
+
 安装[C艹 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/)
 
 1.在任意位置打开cmd或者git bash，执行
